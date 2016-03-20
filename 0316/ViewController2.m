@@ -32,11 +32,11 @@
 //    prepTime = [NSArray arrayWithObjects:@"30 min", @"30 min", @"20 min", @"30 min", @"10 min", @"1 hour", @"45 min", @"5 min", @"30 min", @"8 min", @"20 min", @"20 min", @"5 min", @"1.5 hour", @"4 hours", @"10 min", nil];
     
     // Find out the path of recipes.plist
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"recipes" ofType:@"plist"];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"recipes" ofType:@"plist"];
     
     // Load the file content and read the data into arrays
-    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
-    thumbnails = [dict objectForKey:@"Thumbnail"];
+//    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+//    thumbnails = [dict objectForKey:@"Thumbnail"];
 }
 
 - (void)viewDidUnload
@@ -101,15 +101,15 @@
 //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"willSelectRowAtIndexPath");
-    if (indexPath.row == 0) {
-        return nil;
-    }
-    
-    return indexPath;
-}
+//- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    NSLog(@"willSelectRowAtIndexPath");
+//    if (indexPath.row == 0) {
+//        return nil;
+//    }
+//    
+//    return indexPath;
+//}
 
 /*
 #pragma mark - Navigation
