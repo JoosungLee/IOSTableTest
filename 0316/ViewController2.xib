@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController2">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TPV-Uv-kPJ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="531"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Ha8-P5-teD"/>
+                        <outlet property="delegate" destination="-1" id="B9g-qC-teW"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWe-vz-sNk">
+                    <rect key="frame" x="0.0" y="531" width="320" height="37"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nuk-YP-sHQ">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="37"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <state key="normal" title="+">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnPlus:" destination="-1" eventType="touchUpInside" id="xss-z5-mCq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvG-cQ-TyS">
+                            <rect key="frame" x="160" y="0.0" width="160" height="37"/>
+                            <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <state key="normal" title="-">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnMinus:" destination="-1" eventType="touchUpInside" id="ELS-ye-mZN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="OvG-cQ-TyS" secondAttribute="bottom" id="3Jr-r7-znZ"/>
+                        <constraint firstAttribute="trailing" secondItem="OvG-cQ-TyS" secondAttribute="trailing" id="3Xh-dj-UDi"/>
+                        <constraint firstItem="Nuk-YP-sHQ" firstAttribute="width" secondItem="OvG-cQ-TyS" secondAttribute="width" id="Ccy-Ol-bdh"/>
+                        <constraint firstItem="OvG-cQ-TyS" firstAttribute="top" secondItem="BWe-vz-sNk" secondAttribute="top" id="ETO-WO-BHs"/>
+                        <constraint firstItem="OvG-cQ-TyS" firstAttribute="leading" secondItem="Nuk-YP-sHQ" secondAttribute="trailing" id="Ipv-y0-33g"/>
+                        <constraint firstItem="Nuk-YP-sHQ" firstAttribute="leading" secondItem="BWe-vz-sNk" secondAttribute="leading" id="Mwz-IB-HSC"/>
+                        <constraint firstItem="Nuk-YP-sHQ" firstAttribute="top" secondItem="BWe-vz-sNk" secondAttribute="top" id="VJo-Nv-dXm"/>
+                        <constraint firstAttribute="bottom" secondItem="Nuk-YP-sHQ" secondAttribute="bottom" id="iv7-iq-EmM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="BWe-vz-sNk" firstAttribute="height" secondItem="TPV-Uv-kPJ" secondAttribute="height" multiplier="0.07" id="At1-5p-Dhm"/>
+                <constraint firstItem="TPV-Uv-kPJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JDD-aS-W9F"/>
+                <constraint firstItem="BWe-vz-sNk" firstAttribute="top" secondItem="TPV-Uv-kPJ" secondAttribute="bottom" id="L0q-19-Xm2"/>
+                <constraint firstAttribute="trailing" secondItem="TPV-Uv-kPJ" secondAttribute="trailing" id="XK9-3K-7Nw"/>
+                <constraint firstItem="BWe-vz-sNk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="a1b-1E-nlA"/>
+                <constraint firstAttribute="bottom" secondItem="BWe-vz-sNk" secondAttribute="bottom" id="lJx-BM-7En"/>
+                <constraint firstItem="TPV-Uv-kPJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="t36-yG-1jD"/>
+                <constraint firstAttribute="trailing" secondItem="BWe-vz-sNk" secondAttribute="trailing" id="uYc-vx-wve"/>
+                <constraint firstItem="BWe-vz-sNk" firstAttribute="width" secondItem="TPV-Uv-kPJ" secondAttribute="width" id="wVY-gx-aXS"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
